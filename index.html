@@ -5,37 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rwestudios</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Great+Vibes&display=swap');
+
         body, html {
             height: 100%;
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif; /* A more suitable font for readability */
-            background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Space-like gradient */
+            font-family: 'Roboto', sans-serif; /* Modern and clean font for the body */
+            background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             text-align: center;
+            overflow: hidden; /* Prevents scrollbars if there's animation overflow */
         }
 
         h1 {
             font-size: 3em;
             margin: 0;
-            padding-bottom: 0.5em; /* Reducing space between the title and tagline */
+            padding-bottom: 0.2em; /* Reduced space between the title and tagline */
+            font-weight: 700; /* Makes the title bold */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
         }
 
         p {
             font-size: 1.5em;
             margin: 0;
-            font-style: italic; /* Making tagline italic */
+            font-style: italic;
+            font-family: 'Great Vibes', cursive; /* Playful but readable font for the tagline */
+            opacity: 0.9; /* Slightly toned down to blend with the background */
+            transition: transform 2s, opacity 2s; /* Smooth transition for hover effect */
+        }
+
+        p:hover {
+            transform: scale(1.05); /* Slight scale-up on hover for an interactive feel */
+            opacity: 1; /* Brings back full opacity on hover */
+        }
+
+        /* Adding a bit of "spit" (sparkle) */
+        .sparkle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            animation: sparkle 2s infinite alternate;
+            pointer-events: none; /* Prevents mouse interaction with the sparkle */
+        }
+
+        @keyframes sparkle {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
         }
     </style>
 </head>
 <body>
 
-<h1>rwestudios</h1>
-<p>Building Hidden Magic for Web3 Gaming</p>
+<div class="content">
+    <h1>rwestudios</h1>
+    <p>🎩 Building Hidden Magic for Web3 Gaming</p>
+</div>
+
+<div class="sparkle">✨</div>
 
 </body>
 </html>
